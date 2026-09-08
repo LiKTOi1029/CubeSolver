@@ -4,6 +4,7 @@ local Defaults =
   {
 	CommandsFolder = "data/commands/",
 	Getter = "getter",
+	Tablify = "modules/tablify/tablify",
 	Cubes = 
 	{
 	  Regular = 
