@@ -5,5 +5,8 @@ function love.update(dt)
   io.write(Defaults.Prompt.Input)
   local Choice = Tablify.Execute("NORMAL", io.read():upper(), " ")
   if Choice[1] == "EXIT" then love.event.quit()
-  elseif Getter.Commands[Choice[1]] then Getter.Commands[Choice[1]](Choice) end
+  elseif Getter.Commands[Choice[1]] then
+	table.remove(Choice, 1)
+	Getter.Commands[Choice[1]](Choice)
+  end
 end
