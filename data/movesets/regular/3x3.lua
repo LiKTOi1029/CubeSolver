@@ -1,5 +1,4 @@
-local Defaults = require("defaults")
-local Status = require(Defaults.Path.Status)
+local UniqueCopy = require("data/helpers/uniquecopy")
 local Moveset = 
 {
   ["R"] = 
@@ -71,19 +70,19 @@ local Moveset =
 	{
 	  21,
 	  25,
-	}, -- Orange corner rotation
+	}, -- Orange edge rotation
 	{
 	  25,
 	  27,
-	}, -- Orange corner rotation
+	}, -- Orange edge rotation
 	{
 	  27,
 	  23,
-	}, -- Orange corner rotation
+	}, -- Orange edge rotation
 	{
 	  23,
 	  21
-	}, -- Orange corner rotation
+	}, -- Orange edge rotation
   },
   ["L"] = {},
   ["U"] = {},
@@ -91,15 +90,16 @@ local Moveset =
   ["F"] = {},
   ["D"] = {},
 }
-function Moveset.Execute(Input)
-  Moveset.LocalCopy = Status.Cube
+function Moveset.Execute(Input, Cube)
+  local Copy = UniqueCopy(Cube)
   if Moveset[Input] then
 	for Index, Movement in ipairs(Moveset[Input]) do
-	  Status.Cube[Movement[2]] = Moveset.LocalCopy[Movement[1]]
+	  Cube[Movement[2]] = Copy[Movement[1]]
 	end
   else
 	io.write(Defaults.Prompt.Error, Input, " is not a valid instruction\n")
   end
+  return Cube
 end
 
 return Moveset
