@@ -1,3 +1,5 @@
+local Defaults = require("defaults")
+local Status = require(Defaults.Path.Status)
 local Moveset = 
 {
   ["R"] = 
