@@ -5,7 +5,7 @@ local Status = require(Defaults.Path.Status)
 function Get.Execute(Input)
   Input = InputProcessor(Input)
   if type(Input) == "number" then
-	io.write(Defaults.Prompt.Output, table.concat(Status.Cube, Defaults.Commands.Get.Delimiter), "\n")
+	io.write(Defaults.Prompt.Output, table.concat(Status.Cube), "\n")
   else
 	-- This is not an error, it displays the saved cubes if a filename is inputted
   end
