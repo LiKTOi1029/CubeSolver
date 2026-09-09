@@ -18,6 +18,10 @@ local Defaults =
 	  {
 		["3X3"] = require("data/cubes/regular/3x3"),
 	  },
+	  Movesets = 
+	  {
+		["3X3"] = require("data/movesets/regular/3x3"),
+	  },
 	},
   },
   Prompt = 
