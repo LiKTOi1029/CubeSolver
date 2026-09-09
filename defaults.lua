@@ -26,6 +26,13 @@ local Defaults =
 	Error = "X> ",
 	Warning = "/> ",
 	Output = ">> ",
-  }
+  },
+  Commands = 
+  {
+	Get = 
+	{
+	  Delimiter = " ",
+	},
+  },
 }
 return Defaults
