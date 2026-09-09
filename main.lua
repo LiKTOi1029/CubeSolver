@@ -6,7 +6,6 @@ function love.update(dt)
   local Choice = Tablify.Execute("NORMAL", io.read():upper(), " ")
   if Choice[1] == "EXIT" then love.event.quit()
   elseif Getter.Commands[Choice[1]] then
-	table.remove(Choice, 1)
 	Getter.Commands[Choice[1]].Execute(Choice)
   end
 end

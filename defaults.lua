@@ -16,7 +16,7 @@ local Defaults =
 	{
 	  Cubes = 
 	  {
-		["3X3"] = "data/cubes/regular/3x3",
+		["3X3"] = require("data/cubes/regular/3x3"),
 	  },
 	},
   },
@@ -24,6 +24,8 @@ local Defaults =
   {
 	Input = " > ",
 	Error = "X> ",
+	Warning = "/> ",
+	Output = ">> ",
   }
 }
 return Defaults
