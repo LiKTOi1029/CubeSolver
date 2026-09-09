@@ -6,20 +6,19 @@ local Defaults =
 	Getter = "getter",
 	Tablify = "modules/tablify/tablify",
 	Status = "data/status",
-	Cubes = 
+	CubesFolder = "data/cubes/",
+	HelpersFolder = "data/helpers/",
+	Helper = 
 	{
-	  Regular = 
-	  {
-		X33 = "data/cubes/regular/3x3",
-	  },
+	  InputProcessor = "data/helpers/inputprocessor",
 	},
 	Raw = 
 	{
 	  Cubes = 
 	  {
-		["3X3"] = require("data/cubes/regular/3x3")
-	  }
-	}
+		["3X3"] = "data/cubes/regular/3x3",
+	  },
+	},
   },
   Prompt = 
   {
