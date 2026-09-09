@@ -11,6 +11,7 @@ local Defaults =
 	Helper = 
 	{
 	  InputProcessor = "data/helpers/inputprocessor",
+	  UniqueCopy = "data/helpers/uniquecopy",
 	},
 	Raw = 
 	{
