@@ -17,7 +17,7 @@ function Debug.Execute(Type, Data)
   if Debug.Types[Type] then
 	Debug.Types[Type](Data)
   else
-	io.write(Defaults.Prompt.Error)
+	io.write(Defaults.Prompt.Error, Type, " is not a valid debugging type\n")
   end
 end
 return Debug
