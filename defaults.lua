@@ -12,16 +12,17 @@ local Defaults =
 	{
 	  InputProcessor = "data/helpers/inputprocessor",
 	  UniqueCopy = "data/helpers/uniquecopy",
+	  Debug = "data/helpers/debug",
 	},
 	Raw = 
 	{
 	  Cubes = 
 	  {
-		["3X3"] = require("data/cubes/regular/3x3"),
+		["3X3"] = "data/cubes/regular/3x3",
 	  },
 	  Movesets = 
 	  {
-		["3X3"] = require("data/movesets/regular/3x3"),
+		["3X3"] = "data/movesets/regular/3x3",
 	  },
 	},
   },
