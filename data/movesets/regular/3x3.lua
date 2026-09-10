@@ -47,8 +47,52 @@ local Moveset =
 	{27,25}, -- Orange edge rotation
 	{25,21}, -- Orange edge rotation
   },
-  ["L"] = {},
-  ["L'"] = {},
+  ["L"] = 
+  {
+	{29,2}, -- Green into white
+	{32,5}, -- Green into white
+	{35,8}, -- Green into white
+	{2,11}, -- White into blue
+	{5,14}, -- White into blue
+	{8,17}, -- White into blue
+	{11,47}, -- Blue into yellow
+	{14,50}, -- Blue into yellow
+	{17,53}, -- Blue into yellow
+	{47,29}, -- Yellow into green
+	{50,32}, -- Yellow into green
+	{53,35}, -- Yellow into green
+	{38,40}, -- Red corner rotation
+	{40,44}, -- Red corner rotation
+	{44,46}, -- Red corner rotation
+	{46,38}, -- Red corner rotation
+	{39,43}, -- Red edge rotation
+	{43,45}, -- Red edge rotation
+	{45,41}, -- Red edge rotation
+	{41,39}, -- Red edge rotation
+  },
+  ["L'"] = 
+  {
+	{11,2}, -- Blue into white
+	{14,5}, -- Blue into white
+	{17,8}, -- Blue into white
+	{2,29}, -- White into green
+	{5,32}, -- White into green
+	{8,35}, -- White into green
+	{29,47}, -- Green into yellow
+	{32,50}, -- Green into yellow
+	{35,53}, -- Green into yellow
+	{47,11}, -- Yellow into blue
+	{50,14}, -- Yellow into blue
+	{53,17}, -- Yellow into blue
+	{38,44}, -- Red corner rotation
+	{44,46}, -- Red corner rotation
+	{46,40}, -- Red corner rotation
+	{40,38}, -- Red corner rotation
+	{39,41}, -- Red edge rotation
+	{41,45}, -- Red edge rotation
+	{45,43}, -- Red edge rotation
+	{43,39}, -- Red edge rotation
+  },
   ["U"] = {},
   ["U'"] = {},
   ["D"] = {},
