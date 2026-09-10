@@ -1,4 +1,5 @@
-local UniqueCopy = require("data/helpers/uniquecopy")
+local Defaults = require("defaults")
+local UniqueCopy = require(Defaults.Path.Helper.UniqueCopy)
 local Moveset = 
 {
   ["R"] = 
@@ -93,9 +94,75 @@ local Moveset =
 	{45,43}, -- Red edge rotation
 	{43,39}, -- Red edge rotation
   },
-  ["U"] = {},
-  ["U'"] = {},
-  ["D"] = {},
+  ["U"] = 
+  {
+	{11,38}, -- Blue into red
+	{12,39}, -- Blue into red
+	{13,40}, -- Blue into red
+	{38,29}, -- Red into green
+	{39,30}, -- Red into green
+	{40,31}, -- Red into green
+	{29,20}, -- Green into orange
+	{30,21}, -- Green into orange
+	{31,22}, -- Green into orange
+	{20,11}, -- Orange into blue
+	{21,12}, -- Orange into blue
+	{22,13}, -- Orange into blue
+	{2,4}, -- White corner rotation
+	{4,10}, -- White corner rotation
+	{10,8}, -- White corner rotation
+	{8,2}, -- White corner rotation
+	{3,7}, -- White edge rotation
+	{7,9}, -- White edge rotation
+	{9,5}, -- White edge rotation
+	{5,3}, -- White edge rotation
+  },
+  ["U'"] = 
+  {
+	{11,20}, -- Blue into orange
+	{12,21}, -- Blue into orange
+	{13,22}, -- Blue into orange
+	{20,29}, -- Orange into green
+	{21,30}, -- Orange into green
+	{22,31}, -- Orange into green
+	{29,38}, -- Green into red
+	{30,39}, -- Green into red
+	{31,40}, -- Green into red
+	{38,11}, -- Red into blue
+	{39,12}, -- Red into blue
+	{40,13}, -- Red into blue
+	{2,8}, -- White corner rotation
+	{8,10}, -- White corner rotation
+	{10,4}, -- White corner rotation
+	{4,2}, -- White corner rotation
+	{3,5}, -- White edge rotation
+	{5,9}, -- White edge rotation
+	{9,7}, -- White edge rotation
+	{7,3}, -- White edge rotation
+  },
+  ["D"] = 
+  {
+	{17,26}, -- Blue into orange
+	{18,27}, -- Blue into orange
+	{19,28}, -- Blue into orange
+	{26,35}, -- Orange into green
+	{27,36}, -- Orange into green
+	{28,37}, -- Orange into green
+	{35,44}, -- Green into red
+	{36,45}, -- Green into red
+	{37,46}, -- Green into red
+	{44,17}, -- Red into blue
+	{45,18}, -- Red into blue
+	{46,19}, -- Red into blue
+	{47,49}, -- Yellow corner rotation
+	{49,55}, -- Yellow corner rotation
+	{55,53}, -- Yellow corner rotation
+	{53,47}, -- Yellow corner rotation
+	{48,52}, -- Yellow edge rotation
+	{52,54}, -- Yellow edge rotation
+	{54,50}, -- Yellow edge rotation
+	{50,48}, -- Yellow edge rotation
+  },
   ["D'"] = {},
   ["F"] = {},
   ["F'"] = {},
