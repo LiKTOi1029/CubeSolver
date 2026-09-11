@@ -6,11 +6,11 @@ BooleanTree =
   [false] = 
   {
 	[true] = function(SubMoveset, Cube, Copy) -- DoubleMove
-	  
-	end,
+	  -- not implemented, probably won't be for a long time as well lmao
+	end
 	[false] = function(SubMoveset, Cube, Copy) -- Normal
 	  for Index, FacePair in ipairs(SubMoveset) do
-		Cube[FacePair[1]] = Copy[FacePair[2]]
+		Cube[FacePair[2]] = Copy[FacePair[1]]
 	  end
 	end,
   },
@@ -18,14 +18,16 @@ BooleanTree =
   {
 	[false] = function(SubMoveset, Cube, Copy) -- Reversal
 	  for Index, FacePair in ipairs(SubMoveset) do
-		Cube[FacePair[2]] = Copy[FacePair[1]]
+		Cube[FacePair[1]] = Copy[FacePair[2]]
 	  end
 	end,
-	[true] = function(...)
+	[true] = function(SubMoveset, Cube, Copy) -- Something very wrong
 	  io.write(Defaults.Prompt.Error, "Something went seriously wrong, BooleanTable was true, true\n")
+	  return Cube, Copy
 	end
   },
 }
+
 local Moveset = 
 {
   ["R"] = 
