@@ -1,6 +1,8 @@
 local Defaults = require("defaults")
 local Getter = require(Defaults.Path.Getter)
 local Tablify = require(Defaults.Path.Tablify)
+Getter.Commands["SET"].Init()
+
 function love.update(dt)
   io.write(Defaults.Prompt.Input)
   local Choice = Tablify.Execute("NORMAL", io.read():upper(), " ")
