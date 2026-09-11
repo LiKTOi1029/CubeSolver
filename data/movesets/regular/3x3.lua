@@ -136,10 +136,10 @@ local Moveset =
 	{48,43}, -- Yellow into red
 	{47,40}, -- Yellow into red
 	{46,37}, -- Yellow into red
-	{10,12} -- Blue corner rotation
-	{12,18} -- Blue corner rotation
-	{18,16} -- Blue corner rotation
-	{16,10} -- Blue corner rotation
+	{10,12}, -- Blue corner rotation
+	{12,18}, -- Blue corner rotation
+	{18,16}, -- Blue corner rotation
+	{16,10}, -- Blue corner rotation
 	{11,15}, -- Blue edge rotation
 	{15,17}, -- Blue edge rotation
 	{17,13}, -- Blue edge rotation
