@@ -32,6 +32,7 @@ local Defaults =
 	Error = "X> ",
 	Warning = "/> ",
 	Output = ">> ",
+	Debug = "D> ",
   },
   Commands = 
   {
