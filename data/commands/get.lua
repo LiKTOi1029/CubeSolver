@@ -1,13 +1,12 @@
 local Get = {}
 local Defaults = require("defaults")
 local InputProcessor = require(Defaults.Path.Helper.InputProcessor)
-local Status = require(Defaults.Path.Status)
-function Get.Execute(Input)
+function Get.Execute(Input, Cube, CubeType)
   Input = InputProcessor(Input)
   if type(Input) == "number" then
-	io.write(Defaults.Prompt.Output, Status.Type, "\n")
+	io.write(Defaults.Prompt.Output, CubeType, "\n")
 	local ParsingString = ""
-	for Index, Face in ipairs(Status.Cube) do
+	for Index, Face in ipairs(Cube) do
 	  if Index % 9 == 0 then
 		ParsingString = ParsingString..Face
 		io.write(Defaults.Prompt.Output, ParsingString, "\n")
