@@ -78,13 +78,13 @@ function Moveset.Mover(SubMoveset, Cube, BooleanTable)
 end
 function Moveset.Execute(Input, Cube)
   local BooleanTable = {false, false} -- The first index is Reversal, the second is DoubleMove
-  local Input = Input:gsub("[%'%2%s]+","")
-  if Moveset[Input] then
-	local SubMoveset = Moveset[Input]
+  local TableCheckingInput = Input:gsub("[%'%2%s]+","")
+  if Moveset[TableCheckingInput] then
+	local SubMoveset = Moveset[TableCheckingInput]
 	local DoubleMove = Input:find("2")
 	local Reversal = Input:find("'")
-	if Reversal and not DoubleMove then BooleanTable[1] == true end
-	if DoubleMove and not Reversal then BooleanTable[2] == true end
+	if Reversal and not DoubleMove then BooleanTable[1] = true end
+	if DoubleMove and not Reversal then BooleanTable[2] = true end
 	Moveset.Mover(SubMoveset, Cube, BooleanTable)
   else
 	io.write(Defaults.Prompt.Error, Input, " is not a valid instruction\n")
