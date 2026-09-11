@@ -7,6 +7,7 @@ function Cube.Execute()
   	  if SubIndex == 5 then X33[#X33+1] = "+"
   	  else X33[#X33+1] = Color end
     end
-    return X33
   end
+  return X33
+end
 return Cube
