@@ -39,7 +39,24 @@ local Defaults =
 	Global = 
 	{
 	  Delimiter = " ",
+	  Primes = 
+	  {
+		"",
+		"'",
+	  },
 	},
+	Scramble = 
+	{
+	  ["3X3"] = 
+	  {
+		"R",
+		"L",
+		"U",
+		"D",
+		"F",
+		"B",
+	  },
+	}
   },
 }
 return Defaults
