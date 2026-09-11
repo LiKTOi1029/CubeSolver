@@ -12,7 +12,8 @@ function Set.Execute(Input)
   if Defaults.Path.Raw.Cubes[Input[1]] then
 	Status.Cube = CubeList[Input[1]]
 	Status.Type = Status.Cube[1]
-	io.write(Defaults.Prompt.Output, "Cube set to ", Input[1], "\n")
+	table.remove(Status.Cube, 1)
+	io.write(Defaults.Prompt.Output, "Cube set to ", Status.Type, "\n")
   else
 	io.write(Defaults.Prompt.Error, "The type", Input[1], " is invalid\n")
   end
