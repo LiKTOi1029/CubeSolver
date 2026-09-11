@@ -7,7 +7,7 @@ BooleanTree =
   {
 	[true] = function(SubMoveset, Cube, Copy) -- DoubleMove
 	  -- not implemented, probably won't be for a long time as well lmao
-	end
+	end,
 	[false] = function(SubMoveset, Cube, Copy) -- Normal
 	  for Index, FacePair in ipairs(SubMoveset) do
 		Cube[FacePair[2]] = Copy[FacePair[1]]
@@ -32,26 +32,7 @@ local Moveset =
 {
   ["R"] = 
   {
-	{12,3}, -- Blue into white
-	{15,6}, -- Blue into white
-	{18,9}, -- Blue into white
-	{3,30}, -- White into green
-	{6,33}, -- White into green
-	{9,36}, -- White into green
-	{30,48}, -- Green into yellow
-	{33,51}, -- Green into yellow
-	{36,54}, -- Green into yellow
-	{48,12}, -- Yellow into blue
-	{51,15}, -- Yellow into blue
-	{54,18}, -- Yellow into blue
-	{19,21}, -- Orange corner rotation
-	{21,27}, -- Orange corner rotation
-	{27,25}, -- Orange corner rotation
-	{25,19}, -- Orange corner rotation
-	{20,24}, -- Orange edge rotation
-	{24,26}, -- Orange edge rotation
-	{26,22}, -- Orange edge rotation
-	{22,20}, -- Orange edge rotation
+	
   },
   ["L"] = 
   {
