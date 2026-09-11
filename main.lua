@@ -1,7 +1,7 @@
 local Defaults = require("defaults")
 local Getter = require(Defaults.Path.Getter)
 local Tablify = require(Defaults.Path.Tablify)
-Getter.Commands["SET"].Init()
+Getter.Commands["SET"].Execute({"set", "3X3"})
 
 function love.update(dt)
   io.write(Defaults.Prompt.Input)
