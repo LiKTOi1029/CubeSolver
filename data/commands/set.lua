@@ -14,6 +14,7 @@ function Set.Execute(Input, Cube, Type)
 	table.remove(NewCube, 1)
 	Cube = NewCube
 	io.write(Defaults.Prompt.Output, "Cube set to ", Input[1], "\n")
+	return Cube, Type
   else
 	io.write(Defaults.Prompt.Error, "The type", Input[1], " is invalid\n")
   end
