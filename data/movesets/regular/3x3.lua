@@ -16,6 +16,7 @@ BooleanTree =
 	  for Index, FacePair in ipairs(SubMoveset) do
 		Cube[FacePair[2]] = Copy[FacePair[1]]
 	  end
+	  return Cube
 	end,
   },
   [true] = 
@@ -24,6 +25,7 @@ BooleanTree =
 	  for Index, FacePair in ipairs(SubMoveset) do
 		Cube[FacePair[1]] = Copy[FacePair[2]]
 	  end
+	  return Cube
 	end,
 	[true] = function(SubMoveset, Cube, Copy) -- Something very wrong
 	  io.write(Defaults.Prompt.Error, "Something went seriously wrong, BooleanTable was true, true\n")
@@ -175,7 +177,7 @@ local Moveset =
 }
 function Moveset.Mover(SubMoveset, Cube, BooleanTable)
   local Copy = UniqueCopy(Cube)
-  BooleanTree[BooleanTable[1]][BooleanTable[2]](SubMoveset, Cube, Copy)
+  return BooleanTree[BooleanTable[1]][BooleanTable[2]](SubMoveset, Cube, Copy)
 end
 function Moveset.Execute(Input, Cube)
   local BooleanTable = {false, false} -- The first index is Reversal, the second is DoubleMove
@@ -186,7 +188,7 @@ function Moveset.Execute(Input, Cube)
 	local Reversal = Input:find("'")
 	if Reversal and not DoubleMove then BooleanTable[1] = true end
 	if DoubleMove and not Reversal then BooleanTable[2] = true end
-	Moveset.Mover(SubMoveset, Cube, BooleanTable)
+	Cube = Moveset.Mover(SubMoveset, Cube, BooleanTable)
   else
 	io.write(Defaults.Prompt.Error, Input, " is not a valid instruction\n")
   end
