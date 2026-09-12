@@ -8,9 +8,11 @@ end
 function Move.Execute(Input, Cube, Type)
   Input = InputProcessor(Input)
   if type(Input) == "table" then
+	local MovesetFile = MovesetList[Type].Execute
 	for Index, SingularMove in ipairs(Input) do
-	  MovesetList[Type].Execute(SingularMove, Cube)
+	  Cube, Type = MovesetFile(SingularMove, Cube, Type)
 	end
+	return Cube, Type
   end
 end
 return Move
