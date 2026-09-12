@@ -5,7 +5,7 @@ for Index, CubeFile in pairs(Defaults.Path.Raw.Cubes) do
   CubeList[Index] = require(CubeFile)
 end
 local Set = {}
-function Set.Execute(Input, Cube, Type)
+function Set.Execute(Input, Cube)
   Input = InputProcessor(Input)
   if type(Input) == "number" then io.write(Defaults.Prompt.Error, "Malformed input, please type help for help\n") return end
   if Defaults.Path.Raw.Cubes[Input[1]] then

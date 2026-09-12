@@ -33,6 +33,7 @@ local Defaults =
 	Warning = "/> ",
 	Output = ">> ",
 	Debug = "D> ",
+	Dev = "|> "
   },
   Commands = 
   {

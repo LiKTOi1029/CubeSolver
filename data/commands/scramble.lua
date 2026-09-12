@@ -1,13 +1,13 @@
 local Defaults = require("defaults")
 local Scramble = {}
-function Scramble.Execute(Input, Cube, Type)
-  local SelectedMoveset = require(Defaults.Path.Raw.Movesets[Type])
+function Scramble.Execute(Input, Cube)
+  local SelectedMoveset = require(Defaults.Path.Raw.Movesets[Cube.Type])
   if type(Input) == "table" then
 	-- I haven't implemented this, but it will use files to come up with more customized scrambles.
 	-- Outside of the scope of the 1 week window of this project.
   else
 	local RandomizedNumber = math.random(20, 30)
-	local ScrambleCommandsType = Defaults.Commands.Scramble[Type]
+	local ScrambleCommandsType = Defaults.Commands.Scramble[Cube.Type]
 	local PrimeTable = Defaults.Commands.Global.Primes
 	local Min, Max = 1, #ScrambleCommandsType
 	local NewMove, PreviousMove, Prime = nil, ""

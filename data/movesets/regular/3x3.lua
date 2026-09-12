@@ -5,7 +5,7 @@
 local Defaults = require("defaults")
 local UniqueCopy = require(Defaults.Path.Helper.UniqueCopy)
 
-function Moveset.Execute(Input, Cube, Type)
+function Moveset.Execute(Input, Cube)
   
   return Cube
 end
