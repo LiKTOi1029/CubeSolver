@@ -179,7 +179,7 @@ function Moveset.Mover(SubMoveset, Cube, BooleanTable)
   local Copy = UniqueCopy(Cube)
   return BooleanTree[BooleanTable[1]][BooleanTable[2]](SubMoveset, Cube, Copy)
 end
-function Moveset.Execute(Input, Cube)
+function Moveset.Execute(Input, Cube, Type)
   local BooleanTable = {false, false} -- The first index is Reversal, the second is DoubleMove
   local TableCheckingInput = Input:gsub("[%'%2%s]+","")
   if Moveset[TableCheckingInput] then
