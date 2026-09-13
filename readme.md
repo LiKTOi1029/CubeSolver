@@ -1,7 +1,11 @@
 # Cube Solver
-I will only give myself a week (until September 16, 2026) to finish this project. The end goal is to 
-develop an application that is capable of solving a cube.
-
+~~I will only give myself a week (until September 16, 2026) to finish this project. The end goal is to 
+develop an application that is capable of solving a cube.~~\
+\
+Yeeeaaah, about that I don't think this is possible in a single week as I seldom work with three dimensional 
+objects to be able to mentally sus this out. I am going to work on a formula or an algorithm to figure out 
+how to get one whole side from a single normal (the easy part should only take me a day or two) and then 
+figure out how to make those individual sides move on command. Finally, I will implement a solving algorithm.
 ## Personal Notes
 These are my personal notes where I can indulge on what I did on that particular day. I started this a little bit 
 later in the project.
